@@ -1,0 +1,120 @@
+🌾 農業水資源 RAG 問答系統
+================================
+
+✅ 系統已完全部署！
+
+📊 系統信息
+----------
+✓ Python 依賴：已安裝
+✓ OpenAI API Key：已配置
+✓ PDF 文檔：已檢測（2 個文件）
+✓ 系統檢查：通過
+
+📁 項目統計
+----------
+核心文件：5 個
+- app.py （Streamlit UI）
+- document_processor.py （PDF 處理）
+- qa_engine.py （QA 邏輯）
+- config.py （配置管理）
+- check_setup.py （系統檢查）
+
+配置文件：4 個
+- requirements.txt
+- .env （環境變量 - API key）
+- .env.example
+- .gitignore
+
+啟動腳本：2 個
+- run.bat （Windows）
+- run.sh （Linux/Mac）
+
+文檔：3 個
+- README.md （完整文檔）
+- QUICKSTART.md （快速指南）
+- PROJECT_SUMMARY.md （項目摘要）
+
+📄 PDF 文檔：2 個
+- 113年度「農業水資源業務推動及基礎資料協作服務計畫」_期末報告_彙整_fin.pdf
+- 114年度「農業水資源業務推動及基礎資料協作服務計畫」期末報告(定稿).pdf
+
+🚀 立即開始
+----------
+
+Windows 用戶（推薦）：
+1. 雙擊文件夾中的 run.bat 文件
+   或
+2. 打開命令行，執行：streamlit run app.py
+
+Linux/Mac 用戶：
+1. 打開終端
+2. 進入項目目錄
+3. 執行：bash run.sh
+   或
+4. 執行：streamlit run app.py
+
+🌐 使用應用
+----------
+1. 運行以上命令後，瀏覽器會自動打開
+   （如果沒有，手動訪問：http://localhost:8501）
+
+2. 首次使用：
+   - 點擊左側「Initialize/Reload Vector Store」按鈕
+   - 等待系統處理 PDF（2-5 分鐘）
+
+3. 開始提問：
+   - 在文本框輸入問題
+   - 點擊「提交」獲取答案
+   - 查看源文檔了解更多
+
+📖 示例問題
+-----------
+• "農業水資源的主要應用是什麼？"
+• "項目報告中提到了哪些工作重點？"
+• "水利工程涉及哪些技術方案？"
+• "這個計畫的目標和期限是什麼？"
+
+📚 更多幫助
+----------
+• 快速指南：打開 QUICKSTART.md
+• 完整文檔：打開 README.md
+• 項目摘要：打開 PROJECT_SUMMARY.md
+• 系統檢查：運行 python check_setup.py
+
+⚙️ 系統配置
+----------
+使用的模型：OpenAI GPT-3.5-turbo
+向量數據庫：Chroma（本地存儲）
+前端框架：Streamlit
+文本分塊：1000 字符，200 字符重疊
+
+💡 提示
+------
+• 向量存儲會自動保存在 chroma_db/ 目錄
+• 第一次使用會比較慢，之後會快很多
+• 如果添加新 PDF，點擊「重新加載」按鈕重新索引
+• 點擊「清除對話歷史」可清空聊天記錄
+
+🆘 常見問題
+----------
+Q：看不到答案？
+A：檢查 PDF 中是否有相關信息，或嘗試重新提問
+
+Q：系統很慢？
+A：首次初始化會比較慢，請耐心等待
+
+Q：想修改模型或其他設置？
+A：編輯 qa_engine.py 和 document_processor.py 文件
+
+❓ 有問題？
+---------
+1. 運行 python check_setup.py 檢查系統
+2. 查看應用中的錯誤信息
+3. 查看相關文檔
+
+🎉 準備好了嗎？
+--------------
+運行 streamlit run app.py 或雙擊 run.bat
+然後按照提示操作即可！
+
+祝您使用愉快！

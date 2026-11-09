@@ -1,0 +1,46 @@
+# 忽略常見的臨時文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 環境變量
+.env
+.env.local
+.env.*.local
+
+# Chroma 向量存儲（可選保留）
+# chroma_db/
+
+# Streamlit 緩存
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 日誌
+*.log
