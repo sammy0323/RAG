@@ -1,0 +1,60 @@
+
+# Agricultural Water Resource FAQs
+
+## Q1: What are the main challenges Taiwan faces in agricultural water use?
+A: Main challenges include:
+- Uneven seasonal distribution of rainfall
+- Groundwater over-extraction
+- Climate change causing rainfall variability
+- Increased water use competition
+
+## Q2: What are the effects of water-saving irrigation techniques?
+A: Effects of water-saving irrigation:
+- Drip irrigation can save 30-50% of water
+- Micro-irrigation systems improve fertilizer utilization
+- Reduced pest and disease occurrence
+- Improved product quality
+
+## Q3: How is agricultural water resource monitoring conducted?
+A: Monitoring methods include:
+- Regular water sampling and testing
+- Real-time sensor monitoring
+- Satellite remote sensing image analysis
+- Groundwater level monitoring networks
+
+## Q4: How to address irrigation needs during drought periods?
+A: Response measures include:
+- Establish reservoir regulation systems
+- Promote rainwater harvesting
+- Moderate groundwater development
+- Recycled water utilization
+
+## Q5: What is the sustainable utilization strategy for agricultural water resources?
+A: Sustainable strategies include:
+- Increase water use efficiency
+- Protect water sources
+- Establish ecological water use
+- Strengthen user participation
+
+## Q6: What is the difference in irrigation between paddies and upland fields?
+A: Main differences:
+- Paddies need to maintain water layer, higher water demand
+- Upland fields use intermittent irrigation, better water-saving
+- Paddies require approximately 1000-1500 mm/year
+- Upland fields require approximately 300-800 mm/year
+
+## Q7: What is the relationship between agricultural irrigation and groundwater recharge?
+A: Mutual relationship:
+- Irrigation return water supplements groundwater
+- Moderate extraction promotes groundwater circulation
+- Over-extraction causes land subsidence
+- Need to balance development and protection
+
+## Q8: What is the future development direction for agricultural water resources?
+A: Development directions:
+- Precision agriculture and smart irrigation
+- Promote organic agriculture water-saving models
+- Balance agricultural production with ecology
+- Establish water resource circular economy
+
+Data source: Ministry of Agriculture, Water Resources Bureau, Agricultural Research Institute

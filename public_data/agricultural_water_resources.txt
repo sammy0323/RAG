@@ -1,0 +1,42 @@
+
+# Taiwan Agricultural Water Resources Management Overview
+
+## Agricultural Water Use Overview
+Taiwan's agricultural water use accounts for approximately 70% of total water use, 
+making it the primary water user. The irrigation area is approximately 480,000 hectares, 
+mainly distributed in the southwestern plains.
+
+### Main Irrigation Systems
+1. Shimen Reservoir Irrigation System - Serves Hsinchu and Miaoli regions
+2. Zengwen Reservoir Irrigation System - Serves Jianan Plain
+3. Wushulin Reservoir Irrigation System - Serves Taichung region
+4. Mingde Reservoir Irrigation System - Serves Miaoli region
+
+## Water Resource Policies
+- Improve irrigation water efficiency
+- Promote water-saving irrigation technologies
+- Groundwater replenishment and protection
+- Rainwater and recycled water utilization
+
+## Irrigation Technology Innovation
+- Precision irrigation systems
+- IoT water resource management
+- Drip and micro-irrigation technology applications
+- Agricultural meteorological warning systems
+
+## Water Quality Management
+Agricultural irrigation water quality monitoring includes:
+- pH value, electrical conductivity
+- Heavy metal content
+- Pesticide residues
+- Microbial indicators
+
+## Climate Change Adaptation
+- Establish water resource early warning mechanisms
+- Promote local water resource surveys
+- Develop off-season backup water sources
+- Strengthen irrigation water conservation technologies
+
+## Reference Information
+Data source: Ministry of Agriculture, Taiwan Water Resource Management Organizations
+Last updated: 2024

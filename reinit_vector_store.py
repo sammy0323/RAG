@@ -8,14 +8,14 @@ os.chdir(r"C:\Users\small12321\Desktop\RAG")
 load_dotenv()
 
 try:
-    from document_processor import initialize_vector_store, load_pdfs, split_documents, create_vector_store
+    from document_processor import load_documents, split_documents, create_vector_store
     
-    print("Step 1: Loading PDF files...")
-    documents = load_pdfs(".")
-    print(f"Loaded {len(documents)} pages from PDF files")
+    print("Step 1: Loading documents (PDF and TXT files)...")
+    documents = load_documents(".")
+    print(f"Loaded {len(documents)} documents")
     
     if len(documents) == 0:
-        print("ERROR: No documents loaded from PDFs!")
+        print("ERROR: No documents loaded!")
         exit(1)
     
     print("\nStep 2: Splitting documents into chunks...")

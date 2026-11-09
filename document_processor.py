@@ -1,31 +1,56 @@
 import os
 from pathlib import Path
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
+from langchain_core.documents import Document
 from config import CHROMA_DB_PATH, PDF_FOLDER_PATH
 
 
-def load_pdfs(folder_path: str):
-    """從指定資料夾加載所有 PDF 文件"""
+def load_documents(folder_path: str):
+    """Load all PDF and TXT files from specified folder"""
     documents = []
-    pdf_files = list(Path(folder_path).glob("*.pdf"))
     
-    print(f"找到 {len(pdf_files)} 個 PDF 文件")
+    # Load PDF files
+    pdf_files = list(Path(folder_path).glob("*.pdf"))
+    print(f"Found {len(pdf_files)} PDF files")
     
     for pdf_file in pdf_files:
-        print(f"正在加載: {pdf_file.name}")
-        loader = PyPDFLoader(str(pdf_file))
-        docs = loader.load()
-        documents.extend(docs)
-        print(f"  已加載 {len(docs)} 頁")
+        print(f"Loading: {pdf_file.name}")
+        try:
+            loader = PyPDFLoader(str(pdf_file))
+            docs = loader.load()
+            documents.extend(docs)
+            print(f"  Loaded {len(docs)} pages")
+        except Exception as e:
+            print(f"  Error loading PDF: {e}")
+    
+    # Load TXT files from public_data folder
+    public_data_path = Path(folder_path).parent / "public_data"
+    if public_data_path.exists():
+        txt_files = list(public_data_path.glob("*.txt"))
+        print(f"Found {len(txt_files)} public TXT files")
+        
+        for txt_file in txt_files:
+            print(f"Loading: {txt_file.name}")
+            try:
+                with open(txt_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                doc = Document(
+                    page_content=content,
+                    metadata={"source": txt_file.name}
+                )
+                documents.append(doc)
+                print(f"  Loaded public data file")
+            except Exception as e:
+                print(f"  Error loading TXT: {e}")
     
     return documents
 
 
 def split_documents(documents, chunk_size: int = 1000, chunk_overlap: int = 200):
-    """分割文檔為更小的塊"""
+    """Split documents into smaller chunks"""
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap,
@@ -33,15 +58,15 @@ def split_documents(documents, chunk_size: int = 1000, chunk_overlap: int = 200)
     )
     
     split_docs = text_splitter.split_documents(documents)
-    print(f"文檔分割完成: {len(split_docs)} 個塊")
+    print(f"Document splitting complete: {len(split_docs)} chunks")
     return split_docs
 
 
 def create_vector_store(documents, persist_directory: str = CHROMA_DB_PATH):
-    """創建向量存儲"""
+    """Create vector store"""
     embeddings = OpenAIEmbeddings()
     
-    # 創建或加載 Chroma 向量存儲
+    # Create or load Chroma vector store
     vector_store = Chroma.from_documents(
         documents=documents,
         embedding=embeddings,
